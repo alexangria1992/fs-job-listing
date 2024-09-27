@@ -10,16 +10,14 @@
 <body>
     <!-- <h1><?php echo $title;?></h1> -->
      <h1>{{$title}}</h1>
-     @if(!empty($jobs))
     <ul>
-        @foreach($jobs as $job)
+        @forelse($jobs as $job) 
         <li>{{$job}}</li>
-        @endforeach
+        @empty 
+        <li>No jobs available</li>
+        @endforelse
         
     </ul>
-    @else 
-        <p>No Jobs Available</p>
-       
-    @endif
+    
 </body>
 </html>
