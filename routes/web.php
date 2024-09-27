@@ -9,15 +9,5 @@ Route::get('/', function () {
 });
 
 Route::get('/', [HomeController::class, 'index']);
-Route::get('/jobs', [JobController::class, 'index']);
-Route::get('/jobs/create', [JobController::class, 'create']);
-Route::get('/jobs/{id}', [JobController::class, 'show']);
-Route::post('/jobs', [JobController::class, 'store']);
-
-// Route::get('/posts/{id}', function(string $id){
-//     return 'Post ' . $id;
-// });
-
-// Route::get('/posts/{id}/comments/{commentId}', function(string $id, string $commentId){
-//     return 'Post ' . $id . 'Comment ' . $commentId;
-// });
+Route::get('/jobs/share', [JobController::class, 'share']);
+Route::resource('jobs', JobController::class);
