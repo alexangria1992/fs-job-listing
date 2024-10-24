@@ -9,6 +9,7 @@
         integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
     <title>{{ $title ?? 'Workopia | Find and List Jobs ' }}</title>
+    <script src="//unpkg.com/alpinejs" defer></script>
     <link rel="stylesheet" href="{{ asset('css/style.css') }}">
     @vite('resources/js/app.js')
 
